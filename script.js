@@ -119,4 +119,13 @@ function generatePassword() {
    if (numericCharactersChoice === true) {
      passwordOptions = passwordOptions.concat(numericCharacters);
      console.log(passwordOptions);
+
+   // upper-case characters choice
+   var upperCaseCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
+   console.log(upperCaseCharactersChoice);
+   if (upperCaseCharactersChoice === true) {
+     passwordOptions = passwordOptions.concat(upperCaseCharacters);
+     console.log(passwordOptions);
+}
+}
 }
