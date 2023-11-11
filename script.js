@@ -100,3 +100,9 @@ function getLength() {
   }
   return length;
 }
+
+// Function to generate password with user input
+function generatePassword() {
+  var length = getLength();
+
+}
