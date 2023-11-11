@@ -113,4 +113,10 @@ function generatePassword() {
     console.log(passwordOptions);
   }
 
+   // numeric characters choice
+   var numericCharactersChoice = confirm("Do you want to include numeric characters in your password?");
+   console.log(numericCharactersChoice);
+   if (numericCharactersChoice === true) {
+     passwordOptions = passwordOptions.concat(numericCharacters);
+     console.log(passwordOptions);
 }
