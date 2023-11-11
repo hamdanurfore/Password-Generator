@@ -105,4 +105,12 @@ function getLength() {
 function generatePassword() {
   var length = getLength();
 
+  // special characters choice
+  var specialCharactersChoice = confirm("Do you want to include special characters in your password?");
+  console.log(specialCharactersChoice);
+  if (specialCharactersChoice === true) {
+    passwordOptions = passwordOptions.concat(specialCharacters);
+    console.log(passwordOptions);
+  }
+
 }
