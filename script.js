@@ -121,11 +121,19 @@ function generatePassword() {
      console.log(passwordOptions);
 
    // upper-case characters choice
-   var upperCaseCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
-   console.log(upperCaseCharactersChoice);
-   if (upperCaseCharactersChoice === true) {
-     passwordOptions = passwordOptions.concat(upperCaseCharacters);
+   var upperCasedCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
+   console.log(upperCasedCharactersChoice);
+   if (upperCasedCharactersChoice === true) {
+     passwordOptions = passwordOptions.concat(upperCasedCharacters);
      console.log(passwordOptions);
+}
+
+ // lower-case characters choice
+ var lowerCasedCharactersChoice = confirm("Do you want to include lower-case characters in your password?");
+ console.log(lowerCasedCharactersChoice);
+ if (lowerCasedCharactersChoice === true) {
+   passwordOptions = passwordOptions.concat(lowerCasedCharacters);
+   console.log(passwordOptions);
 }
 }
 }
