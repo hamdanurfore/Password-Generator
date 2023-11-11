@@ -88,31 +88,15 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
-function getPasswordOptions() {
+//  Function to prompt user for password options
+var passwordOptions = [];
 
+function getLength() {
+  var length = prompt("How many characters would you like your password to contain?")
+  console.log(length);
+  if (length < 8 || length > 128) {
+    alert("Error! Password MUST be between 8 and 128 characters");
+    return getLength()
+  }
+  return length;
 }
-
-// Function for getting a random element from an array
-function getRandom(arr) {
-
-}
-
-// Function to generate password with user input
-function generatePassword() {
-
-}
-
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
