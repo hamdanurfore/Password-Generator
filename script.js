@@ -113,27 +113,42 @@ function generatePassword() {
     console.log(passwordOptions);
   }
 
-   // numeric characters choice
-   var numericCharactersChoice = confirm("Do you want to include numeric characters in your password?");
-   console.log(numericCharactersChoice);
-   if (numericCharactersChoice === true) {
-     passwordOptions = passwordOptions.concat(numericCharacters);
-     console.log(passwordOptions);
+  // numeric characters choice
+  var numericCharactersChoice = confirm("Do you want to include numeric characters in your password?");
+  console.log(numericCharactersChoice);
+  if (numericCharactersChoice === true) {
+    passwordOptions = passwordOptions.concat(numericCharacters);
+    console.log(passwordOptions);
+  }
 
-   // upper-case characters choice
-   var upperCasedCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
-   console.log(upperCasedCharactersChoice);
-   if (upperCasedCharactersChoice === true) {
-     passwordOptions = passwordOptions.concat(upperCasedCharacters);
-     console.log(passwordOptions);
-}
+    // upper-case characters choice
+    var upperCasedCharactersChoice = confirm("Do you want to include upper-case characters in your password?");
+    console.log(upperCasedCharactersChoice);
+    if (upperCasedCharactersChoice === true) {
+      passwordOptions = passwordOptions.concat(upperCasedCharacters);
+      console.log(passwordOptions);
+    }
 
- // lower-case characters choice
- var lowerCasedCharactersChoice = confirm("Do you want to include lower-case characters in your password?");
- console.log(lowerCasedCharactersChoice);
- if (lowerCasedCharactersChoice === true) {
-   passwordOptions = passwordOptions.concat(lowerCasedCharacters);
-   console.log(passwordOptions);
-}
-}
-}
+    // lower-case characters choice
+    var lowerCasedCharactersChoice = confirm("Do you want to include lower-case characters in your password?");
+    console.log(lowerCasedCharactersChoice);
+    if (lowerCasedCharactersChoice === true) {
+      passwordOptions = passwordOptions.concat(lowerCasedCharacters);
+      console.log(passwordOptions);
+    }
+    
+    console.log(passwordOptions);
+    var length = parseInt(length);
+    var password = '';
+
+    // randomising
+
+    for(var i = 0; i < length; i++) {
+      var randomIndex = Math.floor(Math.random() * passwordOptions.Length);
+      var randomCharacter = passwordOptions[randomIndex];
+      console.log(randomCharacter);
+      var password = password + randomCharacter;
+    }
+    return password;
+  }
+
